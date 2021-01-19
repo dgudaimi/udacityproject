@@ -8,10 +8,10 @@ CITY_DATA = { 'chicago': 'chicago.csv',
 
 def get_filters():
     """
-    Asks user to specify a city, month, and day to analyze. This is an editional edit for the github project, section 3 task B
+    Asks user to specify a city, month, and day to analyze. This is a comment for the github assignment, section 4 task C.
 
     Returns:
-        (str) city - name of the city to analyze
+        (str) city - name of the city to analyze This is a comment for the github assignment, section 4 task C.
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
@@ -43,17 +43,17 @@ def get_filters():
             else:
                 print('Invalid input, please try again.')
         except ValueError:
-            print('Invalid input, please try again.')     
+            print('Invalid input, please try again.')
     while True:
         try:
             day = input('Please select the day you would like to draw data from (All, Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday): ').title()
             if day in ['All', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']:
                 break
             else:
-                print('Invalid input, please try again.')     
+                print('Invalid input, please try again.')
 
         except ValueError:
-            print('Invalid input, please try again.')    
+            print('Invalid input, please try again.')
 
     print('-'*40)
     return city, month, day
@@ -144,11 +144,11 @@ def trip_duration_stats(df):
     start_time = time.time()
 
     # TO DO: display total travel time
-    print('Total travel time: ', (df['Trip Duration'].sum())/60, 'minutes.' ) 
+    print('Total travel time: ', (df['Trip Duration'].sum())/60, 'minutes.' )
 
 
     # TO DO: display mean travel time
-    print('Average travel time: ', (df['Trip Duration'].mean())/60, 'minutes.' ) 
+    print('Average travel time: ', (df['Trip Duration'].mean())/60, 'minutes.' )
     #mean_travel = df['Trip duration'].mean()
 
 
@@ -176,7 +176,7 @@ def user_stats(df, city):
         print('recent: ', df['Birth Year'].max())
         print('common: ', df['Birth Year'].mean())
 
-    
+
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
